@@ -10,7 +10,7 @@ export const siteConfig: SiteConfig = {
 	title: "Fqzlr",
 
 	// 站点副标题
-	subtitle: "fqzlr的个人博客",
+	subtitle: "fqzlrの博客",
 
 	// 站点 URL
 	site_url: "https://fqzlr.com/",
