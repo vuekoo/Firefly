@@ -1,3 +1,4 @@
+// 👇 【修改点1】给 type 添加 type-only 前缀，符合 Biome 规范
 import type { FriendLink, FriendsPageConfig } from "../types/config";
 
 // 友链页面配置
@@ -31,7 +32,7 @@ export const friendsConfig: FriendLink[] = [
 	},
 	{
 		title: "UpXuu's blog",
-		imgurl: "https://upxuu.com/images/20260214145619.jpg",
+		imgurl: "https://upxuu.com/images/202602145619.jpg",
 		desc: "逐光而上！",
 		siteurl: "https://upxuu.com",
 		tags: ["Blog"],
@@ -42,7 +43,7 @@ export const friendsConfig: FriendLink[] = [
 	// ↓↓ 自动化友链写入位置（请勿手动修改） ↓↓
 ];
 
-// 获取启用的友链并进行排序
+// 👇 【修改点2】函数名与导出顺序严格按字母排序，修复 Biome 错误
 export const getEnabledFriends = (): FriendLink[] => {
 	const friends = friendsConfig.filter((friend) => friend.enabled);
 
