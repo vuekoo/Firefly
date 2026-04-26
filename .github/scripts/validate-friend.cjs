@@ -123,7 +123,7 @@ function parseIssueBody(body) {
 function hasDuplicateSite(configContent, url) {
   if (!url) return false;
   const escaped = escapeRegExp(url);
-  const siteurlRegex = new RegExp(`siteurl:\s*['\"]${escaped}['\"]`, 'i');
+  const siteurlRegex = new RegExp(`siteurl:\\s*['"]${escaped}['"]`, 'i');
   return siteurlRegex.test(configContent);
 }
 

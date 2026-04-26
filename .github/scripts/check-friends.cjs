@@ -45,19 +45,39 @@ function parseFriendsConfig(content) {
 async function pingSite(url) {
   try {
     new URL(url);
-  } catch (error) {
+  } catch {
     return { ok: false, error: `Invalid URL: ${url}` };
   }
 
-  try {
+  const headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
+    Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'Accept-Language': 'en-US,en;q=0.9',
+    'Cache-Control': 'no-cache',
+    Pragma: 'no-cache',
+    'Upgrade-Insecure-Requests': '1',
+  };
+
+  async function fetchWithTimeout() {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), TIMEOUT_MS);
-    const response = await fetch(url, {
-      method: 'GET',
-      redirect: 'follow',
-      signal: controller.signal,
-    });
-    clearTimeout(timeout);
+    try {
+      return await fetch(url, {
+        method: 'GET',
+        redirect: 'follow',
+        signal: controller.signal,
+        headers,
+      });
+    } finally {
+      clearTimeout(timeout);
+    }
+  }
+
+  try {
+    let response = await fetchWithTimeout();
+    if ([403, 502, 503, 504].includes(response.status)) {
+      response = await fetchWithTimeout();
+    }
     return { ok: response.ok, status: response.status, url };
   } catch (error) {
     return { ok: false, error: error.message, url };
