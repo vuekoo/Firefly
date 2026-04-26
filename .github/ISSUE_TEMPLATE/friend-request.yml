@@ -1,0 +1,38 @@
+name: 友链申请
+description: 申请互换友链
+labels: ["friend-request"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: 网站名称
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: 网站首页地址
+    validations:
+      required: true
+
+  - type: input
+    id: friend_page
+    attributes:
+      label: 你的友链页面地址
+    validations:
+      required: true
+
+  - type: input
+    id: avatar
+    attributes:
+      label: 网站头像
+    validations:
+      required: true
+
+  - type: textarea
+    id: desc
+    attributes:
+      label: 网站描述
+    validations:
+      required: true
