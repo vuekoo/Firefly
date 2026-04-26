@@ -32,4 +32,4 @@ jobs:
       - name: 运行巡检脚本
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: node .github/workflows/check-friends.js
+        run: node .github/scripts/check-friends.cjs
