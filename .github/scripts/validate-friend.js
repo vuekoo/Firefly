@@ -5,8 +5,8 @@ const path = require('path');
 // -------------------------- 配置项（请修改为你的信息） --------------------------
 const SITE_INFO = {
   name: "你的站点名称",
-  url: "https://your-site.com",
-  avatar: "https://your-site.com/avatar.jpg",
+  url: "https://fqzlr.com",
+  avatar: "https://fqzlr.com/avatar.jpg",
   desc: "你的站点描述"
 };
 
