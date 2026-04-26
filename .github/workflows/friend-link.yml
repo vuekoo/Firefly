@@ -23,8 +23,9 @@ jobs:
 
       - name: 安装 pnpm
         uses: pnpm/action-setup@v4
+        # 不指定 version，自动读取 package.json 中的版本
         with:
-          version: 9 # 和你项目使用的 pnpm 版本保持一致
+          run_install: false
 
       - name: 安装依赖
         run: pnpm install --frozen-lockfile
