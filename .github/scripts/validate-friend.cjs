@@ -2,7 +2,7 @@ const { chromium } = require('playwright');
 const fs = require('node:fs');
 const path = require('node:path');
 
-// -------------------------- 配置项 --------------------------
+// -------------------------- 配置项（已改成你的真实信息） --------------------------
 const SITE_INFO = {
   name: "fqzlr",
   url: "https://fqzlr.com/",
@@ -13,31 +13,61 @@ const SITE_INFO = {
 const FRIENDS_CONFIG_PATH = path.join(__dirname, '../../src/config/friendsConfig.ts');
 // -------------------------------------------------------------
 
-// 从 Issue 中提取表单数据（修复版）
+// 【通用解析器】不依赖固定标题，直接按常见键名匹配
 function parseIssueBody(body) {
-  const data = {};
+  const data = {
+    site_name: '',
+    site_url: '',
+    friend_page_url: '',
+    site_desc: '',
+    site_avatar: '',
+    site_tag: 'Blog'
+  };
+
+  // 匹配各种可能的键名
   const lines = body.split('\n');
+  for (const line of lines) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith('#') || trimmed.startsWith('---')) continue;
 
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i]?.trim() || '';
-
-    if (line.includes('网站名称') || line.includes('站点名称')) {
-      data.site_name = lines[i + 1]?.trim() || '';
+    // 网站名称/站点名称
+    if (/名称|标题/.test(trimmed) && /[:：]/.test(trimmed)) {
+      const [_, value] = trimmed.split(/[:：]/);
+      if (value?.trim()) data.site_name = value.trim();
     }
-    else if (line.includes('网站链接') || line.includes('站点链接')) {
-      data.site_url = lines[i + 1]?.trim() || '';
+    // 网站链接/站点链接
+    else if (/链接|网址|地址/.test(trimmed) && /[:：]/.test(trimmed)) {
+      const [_, value] = trimmed.split(/[:：]/);
+      if (value?.trim()) {
+        const url = value.trim();
+        if (url.startsWith('http')) data.site_url = url;
+      }
     }
-    else if (line.includes('友链页面') || line.includes('友链地址')) {
-      data.friend_page_url = lines[i + 1]?.trim() || '';
+    // 友链页面
+    else if (/友链/.test(trimmed) && /[:：]/.test(trimmed)) {
+      const [_, value] = trimmed.split(/[:：]/);
+      if (value?.trim()) {
+        const url = value.trim();
+        if (url.startsWith('http')) data.friend_page_url = url;
+      }
     }
-    else if (line.includes('网站描述') || line.includes('站点描述')) {
-      data.site_desc = lines[i + 1]?.trim() || '';
+    // 描述
+    else if (/描述|简介/.test(trimmed) && /[:：]/.test(trimmed)) {
+      const [_, value] = trimmed.split(/[:：]/);
+      if (value?.trim()) data.site_desc = value.trim();
     }
-    else if (line.includes('头像') || line.includes('图标')) {
-      data.site_avatar = lines[i + 1]?.trim() || '';
+    // 头像
+    else if (/头像|图标/.test(trimmed) && /[:：]/.test(trimmed)) {
+      const [_, value] = trimmed.split(/[:：]/);
+      if (value?.trim()) {
+        const url = value.trim();
+        if (url.startsWith('http')) data.site_avatar = url;
+      }
     }
-    else if (line.includes('标签')) {
-      data.site_tag = lines[i + 1]?.trim() || 'Blog';
+    // 标签
+    else if (/标签|分类/.test(trimmed) && /[:：]/.test(trimmed)) {
+      const [_, value] = trimmed.split(/[:：]/);
+      if (value?.trim()) data.site_tag = value.trim();
     }
   }
 
@@ -115,13 +145,13 @@ async function main() {
 
   // 检查必填项
   if (!formData.site_name || !formData.site_url || !formData.friend_page_url) {
-    console.error("❌ 表单信息不完整");
+    console.error("❌ 表单信息不完整，请确保填写了名称、链接和友链页面地址");
     process.exit(1);
   }
 
   const isValid = await validateFriendLink(formData.friend_page_url);
   if (!isValid) {
-    console.error('❌ 友链验证失败');
+    console.error('❌ 友链验证失败，未找到本站信息');
     process.exit(1);
   }
 
