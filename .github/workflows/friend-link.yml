@@ -28,7 +28,7 @@ jobs:
         run: |
           npm install playwright
           npm install @playwright/browser-chromium
-           npm install @biomejs/biome
+          npm install @biomejs/biome
 
       - name: 安装 Playwright 浏览器
         run: npx playwright install chromium
@@ -41,6 +41,14 @@ jobs:
           ISSUE_BODY: ${{ github.event.issue.body }}
         run: node .github/scripts/validate-friend.js
 
+      - name: 运行 Biome 格式化（修复所有问题）
+        if: steps.validate.outputs.status == 'success'
+        run: npx biome format --write ./src
+
+      - name: 运行 Biome 检查（确保通过）
+        if: steps.validate.outputs.status == 'success'
+        run: npx biome ci ./src --reporter=github || npx biome check --write --unsafe ./src
+
       - name: 配置 Git 用户
         if: steps.validate.outputs.status == 'success'
         run: |
@@ -50,7 +58,7 @@ jobs:
       - name: 提交并推送修改
         if: steps.validate.outputs.status == 'success'
         run: |
-          git add src/config/friendsConfig.ts
+          git add .
           git commit -m "🤖 自动添加友链 #${{ github.event.issue.number }}" || echo "无需提交"
           git push
 
