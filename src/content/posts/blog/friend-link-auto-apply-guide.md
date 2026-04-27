@@ -14,7 +14,13 @@ draft: false
 author: fqzlr
 ---
 
-# Firefly 友链自助申请自动化完整教程
+# Firefly 友链自助申请自动化 
+> [!TIP]
+> 原教程来自upxuu
+> https://upxuu.com/posts/friend-link-system
+
+
+
 
 这篇文章把我这次在 Firefly 里落地的“友链自助申请”方案完整拆开讲一遍。
 
