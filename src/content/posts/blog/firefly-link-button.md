@@ -14,7 +14,7 @@ draft: false
 author: fqzlr
 ---
 
-# Firefly 友链自助申请按钮添加教程
+# Firefly 友链自助申请按钮添加
 
 本篇教程适用于 **Firefly Astro 主题**，不破坏原有布局、不影响任何功能，只修改两处代码，实现两种友链申请入口。
 

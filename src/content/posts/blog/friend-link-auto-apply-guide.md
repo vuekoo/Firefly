@@ -1,5 +1,5 @@
 ---
-title: Firefly 友链自助申请自动化完整教程
+title: Firefly 友链自助申请自动化
 published: 2026-04-27
 updated: 2026-04-27
 description: 从 Issue 表单、GitHub Actions、Playwright 校验，到自动写入 friendsConfig.ts、格式化、提交与回评，这篇文章完整拆解 Firefly 友链自助申请的实现原理、关键代码和落地步骤。
