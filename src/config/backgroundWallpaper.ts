@@ -2,7 +2,7 @@ import type { BackgroundWallpaperConfig } from "@/types/config";
 
 export const backgroundWallpaper: BackgroundWallpaperConfig = {
 	// 壁纸模式："banner" 横幅壁纸，"overlay" 全屏透明，"none" 纯色背景无壁纸
-	mode: "banner",
+	mode: "overlay",
 	// 是否允许用户通过导航栏切换壁纸模式，设为false可提升性能（只渲染当前模式）
 	switchable: true,
 	/**
@@ -39,7 +39,7 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 		// 桌面背景图片（支持单张或多张随机）
 		// desktop: "assets/images/DesktopWallpaper/d1.avif",
 		desktop: [
-			"assets/images/DesktopWallpaper/bk1.webp",
+			"https://tu.fqzlr.com/random?type=img&dir=beijing&orientation=auto",
 			// "assets/images/DesktopWallpaper/bk2.webp",
 			// "assets/images/DesktopWallpaper/bk3.webp",
 			// "assets/images/DesktopWallpaper/d1.avif",
@@ -52,7 +52,7 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 		// 移动背景图片（支持单张或多张随机）
 		// mobile: "assets/images/MobileWallpaper/m1.avif",
 		mobile: [
-			"assets/images/DesktopWallpaper/bk1.webp",
+			"https://tu.fqzlr.com/random?type=img&dir=beijing&orientation=auto",
 			// "assets/images/DesktopWallpaper/bk2.webp",
 			// "assets/images/DesktopWallpaper/bk3.webp"
 			// "assets/images/MobileWallpaper/m1.avif",
@@ -68,7 +68,7 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 		// 图片位置
 		// 支持所有CSS object-position值，如: 'top', 'center', 'bottom', 'left top', 'right bottom', '25% 75%', '10px 20px'..
 		// 如果不知道怎么配置百分百之类的配置，推荐直接使用：'center'居中，'top'顶部居中，'bottom' 底部居中，'left'左侧居中，'right'右侧居中
-		position: "0% 20%",
+		position: "center center",
 
 		// 主页横幅文字
 		homeText: {
@@ -166,10 +166,10 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 		// 层级，确保壁纸在背景层
 		zIndex: -1,
 		// 壁纸透明度
-		opacity: 0.8,
+		opacity: 1,
 		// 背景模糊度
-		blur: 10,
+		blur: 0,
 		// 卡片透明度，0-1之间，值越小越透明
-		cardOpacity: 0.5,
+		cardOpacity: 0.8,
 	},
 };
