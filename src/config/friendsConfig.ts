@@ -34,7 +34,7 @@ export const friendsConfig: FriendLink[] = [
 		issue_id: 0,
 	},
 	{
-		title: "UpXuu's blog",
+		title: "UpXuu",
 		imgurl: "https://upxuu.com/images/20260214145619.jpg",
 		desc: "逐光而上！",
 		siteurl: "https://upxuu.com",
@@ -42,6 +42,16 @@ export const friendsConfig: FriendLink[] = [
 		weight: 10,
 		enabled: true,
 		issue_id: 0,
+	},
+	{
+		title: "Re.Y.Ju.hao | 个人主页",
+		imgurl: "https://img.cdn1.vip/i/69f03a1c79908_1777351196.webp",
+		desc: "先活着吧，其他的再想想",
+		siteurl: "http://irehao.42web.io/",
+		tags: ["Blog"],
+		weight: 10,
+		enabled: true,
+		issue_id: 22,
 	},
 ];
 
