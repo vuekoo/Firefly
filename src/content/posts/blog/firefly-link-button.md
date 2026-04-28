@@ -1,5 +1,5 @@
 ---
-title: Firefly 友链自助申请按钮添加教程
+title: Firefly 友链自助申请按钮添加
 published: 2026-04-27
 updated: 2026-04-27
 description: 一步到位给 Firefly 主题添加两种友链自助申请入口：右上角申请按钮 + 友链页面文字超链接，复制即用。

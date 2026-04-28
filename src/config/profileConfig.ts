@@ -28,6 +28,12 @@ export const profileConfig: ProfileConfig = {
 			showName: false,
 		},
 		{
+			name: "bilibili",
+			icon: "fa7-brands:bilibili",
+			url: "https://space.bilibili.com/2017273493",
+			showName: false,
+		},
+		{
 			name: "GitHub",
 			icon: "fa7-brands:github",
 			url: "https://github.com/fqzlr",
