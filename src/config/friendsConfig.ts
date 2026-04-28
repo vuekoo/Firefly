@@ -53,6 +53,16 @@ export const friendsConfig: FriendLink[] = [
 		enabled: true,
 		issue_id: 22,
 	},
+	{
+		title: "大熊",
+		imgurl: "https://halo.aizaibao.cn/upload/%E5%A4%B4%E5%83%8F.jpg",
+		desc: "日常随笔与灵感收集小角落",
+		siteurl: "https://halo.aizaibao.cn/",
+		tags: ["Blog"],
+		weight: 10,
+		enabled: true,
+		issue_id: 23,
+	},
 ];
 
 // 获取启用的友链并进行排序
