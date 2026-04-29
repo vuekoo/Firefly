@@ -78,11 +78,11 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 			},
 			{
 				name: "fqzlrの邮局",
-				url: "https://fqzlr.edu.kg",
+				url: "https://yj.fqzlr.edu.kg",
 				external: true,
 				icon: "fa7-solid:envelope",
 			},
-						{
+			{
 				name: "my home",
 				url: "https://home.fqzlr.com",
 				external: true,
