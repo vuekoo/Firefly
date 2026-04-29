@@ -2,7 +2,7 @@
 title: "Git 使用教程"
 published: 2026-04-28
 updated: 2026-04-28
-description: git步骤练习
+description: git 使用教程及常用命令，自用
 image: ./cover.jpg
 tags: [Git]
 category: Git
