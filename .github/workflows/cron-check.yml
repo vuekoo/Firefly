@@ -62,7 +62,6 @@ jobs:
           }
 
           async function main() {
-            # --------------- 【修改1：读取TS配置文件（替代原JSON）】---------------
             const friendsConfigPath = 'src/config/friendsConfig.ts'; // 你的TS文件路径
             const friendsConfigContent = fs.readFileSync(friendsConfigPath, 'utf-8');
             // 正则匹配 friendsConfig 数组内容
@@ -73,21 +72,21 @@ jobs:
               process.exit(1);
             }
             // 解析为JSON数组（TS对象 → JSON）
-            const friends = JSON.parse(
-              match[1]
-                .replace(/title/g, '"title"') // 加引号适配JSON解析
-                .replace(/imgurl/g, '"imgurl"')
-                .replace(/desc/g, '"desc"')
-                .replace(/siteurl/g, '"siteurl"')
-                .replace(/tags/g, '"tags"')
-                .replace(/weight/g, '"weight"')
-                .replace(/enabled/g, '"enabled"')
-                .replace(/issue_id/g, '"issue_id"')
-            );
+            const raw = match[1]
+              .replace(/\btitle\s*:/g, '"title":')
+              .replace(/\bimgurl\s*:/g, '"imgurl":')
+              .replace(/\bdesc\s*:/g, '"desc":')
+              .replace(/\bsiteurl\s*:/g, '"siteurl":')
+              .replace(/\btags\s*:/g, '"tags":')
+              .replace(/\bweight\s*:/g, '"weight":')
+              .replace(/\benabled\s*:/g, '"enabled":')
+              .replace(/\bissue_id\s*:/g, '"issue_id":')
+              // 删除对象 / 数组尾部可能存在的 trailing commas
+              .replace(/,\s*(?=[\]}])/g, '');
+            const friends = JSON.parse(raw);
 
             const results = [];
 
-            # --------------- 【修改2：遍历逻辑适配TS字段】---------------
             for (const f of friends) {
               // 跳过指定名称（原name → title）
               const skipNames = ['UpXuu'];
@@ -143,7 +142,7 @@ jobs:
 
             const failed = results.filter(r => !r.ok);
 
-            # --------------- 【通知逻辑不变：仅字段是适配后的（name=title，url=siteurl）】---------------
+            // 通知逻辑不变：仅字段是适配后的（name=title，url=siteurl）
             for (const f of failed) {
               if (f.issue_id) {
                 try {
