@@ -84,6 +84,16 @@ export const friendsConfig: FriendLink[] = [
 		enabled: true,
 		issue_id: 28,
 	},
+	{
+		title: "MmMing的博客",
+		imgurl: "https://avatars.githubusercontent.com/u/88274799?v=4",
+		desc: "神人",
+		siteurl: "https://tblog.mmzhiku.xyz/",
+		tags: ["Blog"],
+		weight: 10,
+		enabled: true,
+		issue_id: 35,
+	},
 ];
 
 // 获取启用的友链并进行排序
