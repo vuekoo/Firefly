@@ -62,39 +62,35 @@ jobs:
           }
 
           async function main() {
-            const friendsConfigPath = 'src/config/friendsConfig.ts'; // 你的TS文件路径
+            // ====================== 我只改了这里：路径 ======================
+            const friendsConfigPath = 'src/data/friends.ts'; // 🔥 已改为你现在的路径
+            // ==============================================================
             const friendsConfigContent = fs.readFileSync(friendsConfigPath, 'utf-8');
-            // 正则匹配 friendsConfig 数组内容
-            const friendsConfigRegex = /export const friendsConfig: FriendLink\[\] = (\[(\s|\S)*?\]);/;
+            
+            // 匹配 friendsData 而不是 friendsConfig
+            const friendsConfigRegex = /export const friendsData: FriendItem\[\] = (\[(\s|\S)*?\]);/;
             const match = friendsConfigContent.match(friendsConfigRegex);
             if (!match) {
-              console.error('❌ 读取友链配置失败：未找到 friendsConfig 数组');
+              console.error('❌ 读取友链配置失败：未找到 friendsData 数组');
               process.exit(1);
             }
-            // 解析为JSON数组（TS对象 → JSON）
+            
             const raw = match[1]
+              .replace(/\bid\s*:/g, '"id":')
               .replace(/\btitle\s*:/g, '"title":')
               .replace(/\bimgurl\s*:/g, '"imgurl":')
               .replace(/\bdesc\s*:/g, '"desc":')
               .replace(/\bsiteurl\s*:/g, '"siteurl":')
               .replace(/\btags\s*:/g, '"tags":')
-              .replace(/\bweight\s*:/g, '"weight":')
-              .replace(/\benabled\s*:/g, '"enabled":')
-              .replace(/\bissue_id\s*:/g, '"issue_id":')
-              // 删除对象 / 数组尾部可能存在的 trailing commas
               .replace(/,\s*(?=[\]}])/g, '');
             const friends = JSON.parse(raw);
 
             const results = [];
 
             for (const f of friends) {
-              // 跳过指定名称（原name → title）
               const skipNames = ['UpXuu'];
               if (skipNames.includes(f.title)) continue;
-              // 仅检查启用的友链（新增：过滤enabled=false的项）
-              if (!f.enabled) continue;
 
-              // 原url → siteurl
               const url = f.siteurl.replace(/\/$/, '');
               console.log(`检查: ${f.title} - ${url}`);
 
@@ -103,11 +99,11 @@ jobs:
               const status = result.ok ? '✅' : '❌';
               console.log(`  结果: ${status} ${result.ok ? '' : result.error}`);
               results.push({
-                name: f.title, // 原name → title
-                url: url, // 原url → siteurl
+                name: f.title,
+                url: url,
                 ok: result.ok,
                 error: result.error || null,
-                issue_id: f.issue_id || null // 保留issue_id
+                issue_id: f.issue_id || null
               });
 
               await new Promise(r => setTimeout(r, 2000));
@@ -142,7 +138,6 @@ jobs:
 
             const failed = results.filter(r => !r.ok);
 
-            // 通知逻辑不变：仅字段是适配后的（name=title，url=siteurl）
             for (const f of failed) {
               if (f.issue_id) {
                 try {
