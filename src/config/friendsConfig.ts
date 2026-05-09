@@ -94,6 +94,16 @@ export const friendsConfig: FriendLink[] = [
 		enabled: true,
 		issue_id: 35,
 	},
+	{
+		title: "年华",
+		imgurl: "https://q1.qlogo.cn/g?b=qq&nk=1323860289&s=640",
+		desc: "分享生活和记术。",
+		siteurl: "https://blog.520781.xyz/",
+		tags: ["Blog"],
+		weight: 10,
+		enabled: true,
+		issue_id: 26,
+	},
 ];
 
 // 获取启用的友链并进行排序
