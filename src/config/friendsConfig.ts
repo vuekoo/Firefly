@@ -85,14 +85,14 @@ export const friendsConfig: FriendLink[] = [
 		issue_id: 28,
 	},
 	{
-		title: "MmMing的博客",
-		imgurl: "https://avatars.githubusercontent.com/u/88274799?v=4",
-		desc: "神人",
+		title: "MmzMing",
+		imgurl: "https://i.stardots.io/784774835/StarDots-2026051117505284739.webp",
+		desc: "神人博客",
 		siteurl: "https://tblog.mmzhiku.xyz/",
 		tags: ["Blog"],
 		weight: 10,
 		enabled: true,
-		issue_id: 35,
+		issue_id: 40,
 	},
 	{
 		title: "年华",
