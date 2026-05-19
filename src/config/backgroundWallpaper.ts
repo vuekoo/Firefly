@@ -2,7 +2,7 @@ import type { BackgroundWallpaperConfig } from "@/types/config";
 
 export const backgroundWallpaper: BackgroundWallpaperConfig = {
 	// 壁纸模式："banner" 横幅壁纸，"fullscreen" 全屏壁纸，"overlay" 全屏透明，"none" 纯色背景无壁纸
-	mode: "banner",
+	mode: "fullscreen",
 	// 是否允许用户通过导航栏切换壁纸模式
 	// 且同时维护多种壁纸模式过于复杂（已经屎山代码），在切换时有时候可能会出现一些奇怪的过渡效果或者bug
 	// 推荐只选择自己喜欢的模式并关闭切换功能
@@ -41,12 +41,19 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 		// 桌面背景图片（支持单张或多张随机）
 		// desktop: "assets/images/DesktopWallpaper/d1.avif",
 		desktop: [
-			"assets/images/DesktopWallpaper/d1.avif",
-			"assets/images/DesktopWallpaper/d2.avif",
-			"assets/images/DesktopWallpaper/d3.avif",
-			"assets/images/DesktopWallpaper/d4.avif",
-			"assets/images/DesktopWallpaper/d5.avif",
-			"assets/images/DesktopWallpaper/d6.avif",
+			"assets/images/DesktopWallpaper/bk (1).jpg",
+			"assets/images/DesktopWallpaper/bk (1).png",
+			"assets/images/DesktopWallpaper/bk (2).jpg",
+			"assets/images/DesktopWallpaper/bk (3).jpg",
+			"assets/images/DesktopWallpaper/bk (4).jpg",
+			"assets/images/DesktopWallpaper/bk (5).jpg",
+			"assets/images/DesktopWallpaper/bk1.webp",
+			"assets/images/DesktopWallpaper/bk2.webp",
+			"assets/images/DesktopWallpaper/bk4 (1).webp",
+			"assets/images/DesktopWallpaper/bk4 (3).webp",
+			"assets/images/DesktopWallpaper/bz (2).png",
+			"assets/images/DesktopWallpaper/bz (1).png",
+
 		],
 		// 移动背景图片（支持单张或多张随机）
 		// mobile: "assets/images/MobileWallpaper/m1.avif",
@@ -70,17 +77,17 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			// 是否允许用户通过控制面板切换横幅标题显示
 			switchable: true,
 			// 主页横幅主标题
-			title: "Lovely firefly!",
+			title: "fqzlrのblog",
 			// 主页横幅主标题字体大小
 			titleSize: "3.8rem",
 			// 主页横幅副标题
 			subtitle: [
-				"In Reddened Chrysalis, I Once Rest",
-				"From Shattered Sky, I Free Fall",
-				"Amidst Silenced Stars, I Deep Sleep",
-				"Upon Lighted Fyrefly, I Soon Gaze",
-				"From Undreamt Night, I Thence Shine",
-				"In Finalized Morrow, I Full Bloom",
+			"心有山海，静而无边",
+			"追风赶月，莫留遗憾",
+			"道阻且长，行则将至",
+			"浅喜似苍狗，深爱如长风",
+			"鲜衣怒马，不负韶华",
+			"万般过往，皆为序章",
 			],
 			// 主页横幅副标题字体大小
 			subtitleSize: "1.5rem",

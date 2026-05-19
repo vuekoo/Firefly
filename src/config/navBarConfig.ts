@@ -70,24 +70,37 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 				external: true,
 				icon: "fa7-brands:github",
 			},
-			{
-				name: "fqzlrの图床",
-				url: "https://tu.fqzlr.com",
-				external: true,
-				icon: "fa7-solid:image",
-			},
-			{
-				name: "fqzlrの邮局",
-				url: "https://yj.fqzlr.edu.kg",
-				external: true,
-				icon: "fa7-solid:envelope",
-			},
-			{
-				name: "my home",
-				url: "https://home.fqzlr.com",
-				external: true,
-				icon: "fa7-solid:house-chimney",
-			},
+				{
+					name: "fqzlrの图床",
+					url: "https://tu.fqzlr.com",
+					external: true,
+					icon: "fa7-solid:image",
+				},
+				{
+					name: "fqzlrの邮局",
+					url: "https://yj.fqzlr.edu.kg",
+					external: true,
+					icon: "fa7-solid:envelope",
+				},
+
+				{
+					name: "fqzlrの笔记",
+					url: "https://bj.fqzlr.com",
+					external: true,
+					icon: "material-symbols:book-4-rounded",
+				},
+				{
+					name: "fqzlrの统计",
+					url: "https://umami.fqzlr.com/share/kHCJG2ZUL1r6q5Js",
+					external: true,
+					icon: "material-symbols:123",
+				},
+				{
+					name: "fqzlrの状态",
+					url: "https://kuma.fqzlr.com/status/1",
+					external: true,
+					icon: "fa7-solid:chart-line",
+				},
 		],
 	});
 
