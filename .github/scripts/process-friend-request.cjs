@@ -170,9 +170,8 @@ function parseFriendsConfig(content) {
 }
 
 function renderFriend(friend, indent) {
-  const tags = (friend.tags && friend.tags.length ? friend.tags : [DEFAULT_TAG])
-    .map((tag) => `"${escapeString(tag)}"`)
-    .join(', ');
+  const tags = friend.tags?.length ? friend.tags : [DEFAULT_TAG];
+  const tagsText = tags.map((tag) => `"${escapeString(tag)}"`).join(', ');
 
   return [
     `${indent}{`,
@@ -180,7 +179,7 @@ function renderFriend(friend, indent) {
     `${indent}\timgurl: "${escapeString(friend.imgurl)}",`,
     `${indent}\tdesc: "${escapeString(friend.desc)}",`,
     `${indent}\tsiteurl: "${escapeString(friend.siteurl)}",`,
-    `${indent}\ttags: [${tags}],`,
+    `${indent}\ttags: [${tagsText}],`,
     `${indent}\tweight: ${Number.isFinite(friend.weight) ? friend.weight : 10},`,
     `${indent}\tenabled: ${friend.enabled !== false},`,
     `${indent}\tissue_id: ${Number.isFinite(friend.issue_id) ? friend.issue_id : 0},`,
@@ -285,9 +284,9 @@ async function validateFriendPage(pageUrl) {
           waitUntil: 'domcontentloaded',
           timeout: 12000
         });
-        if (response && response.ok()) break;
+        if (response?.ok()) break;
 
-        lastError = `HTTP ${response ? response.status() : 'unknown'}`;
+        lastError = `HTTP ${response?.status() ?? 'unknown'}`;
       } catch (error) {
         lastError = error.message || '无法访问';
       }
@@ -299,9 +298,9 @@ async function validateFriendPage(pageUrl) {
 
     const actualUrl = page.url() || pageUrl;
     const pageTitle = await page.title();
-    const statusCode = response ? response.status() : null;
+    const statusCode = response?.status() ?? null;
 
-    if (!response || !response.ok()) {
+    if (!response?.ok()) {
       return {
         ok: false,
         kind: 'unreachable',
