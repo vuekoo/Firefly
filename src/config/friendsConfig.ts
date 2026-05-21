@@ -250,7 +250,17 @@ export const friendsConfig: FriendLink[] = [
 		enabled: true, // 是否启用
 		issue_id: 50,
 	},
-	
+	{
+		title: "ZhiJing’s Blog",
+		imgurl:
+			"https://iwexe.top/avatar.svg",
+		desc: "Go with the flow.",
+		siteurl: "https://iwexe.top",
+		tags: ["Blog"],
+		weight: 10, // 权重，数字越大排序越靠前
+		enabled: true, // 是否启用
+		issue_id: 50,
+	},
 ];
 
 // 获取启用的友链并进行排序
