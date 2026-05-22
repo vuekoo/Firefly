@@ -55,7 +55,7 @@ export const friendsConfig: FriendLink[] = [
 	},
 	{
 		title: "大熊",
-		imgurl: "https://halo.aizaibao.cn/upload/%E5%A4%B4%E5%83%8F.jpg",
+		imgurl: "https://halo.aizaibao.cn/upload/%E5%A4%B4%E5%83%8F-AHbr.jpg",
 		desc: "日常随笔与灵感收集小角落",
 		siteurl: "https://halo.aizaibao.cn/",
 		tags: ["Blog"],
@@ -66,23 +66,13 @@ export const friendsConfig: FriendLink[] = [
 	{
 		title: "xf_blog",
 		imgurl:
-			"https://github.com/lm-xiao-fen/lm-xiao-fen.github.io/blob/main/image/MEITU_20260128_220225596.jpg?raw=true",
+			"https://github.com/xfcnl/xfcnl.github.io/blob/main/image/MEITU_20260128_220225596.jpg?raw=true",
 		desc: "立志用 cloudflare workers，GitHub pages 和 vercel 做出整个互联网的up（虽然不会成功",
-		siteurl: "https://lm-xiao-fen.github.io/",
+		siteurl: "https://xfcnl.github.io",
 		tags: ["Blog"],
 		weight: 10,
 		enabled: true,
 		issue_id: 28,
-	},
-	{
-		title: "MmzMing",
-		imgurl: "https://i.stardots.io/784774835/StarDots-2026051117505284739.webp",
-		desc: "神人博客",
-		siteurl: "https://tblog.mmzhiku.xyz/",
-		tags: ["Blog"],
-		weight: 10,
-		enabled: true,
-		issue_id: 40,
 	},
 	{
 		title: "年华",
@@ -129,7 +119,7 @@ export const friendsConfig: FriendLink[] = [
 	{
 		title: "Mizuki Docs",
 		imgurl:
-			"https://q.qlogo.cn/headimg_dl?dst_uin=3231515355&spec=640&img_type=jpg",
+			"https://i.stardots.io/784774835/StarDots-2026052116374135506.jpg",
 		desc: "Mizuki User Manual",
 		siteurl: "https://docs.mizuki.mysqil.com",
 		tags: ["Docs"],
@@ -261,6 +251,17 @@ export const friendsConfig: FriendLink[] = [
 		enabled: true, // 是否启用
 		issue_id: 50,
 	},
+	{
+		title: "我的小破站",
+		imgurl: "https://blog.catj1.qzz.io/medias/cat.jpeg",
+		desc: "记录技术笔记的小站",
+		siteurl: "https://blog.catj1.qzz.io/",
+		tags: ["Blog"],
+		weight: 10, // 权重，数字越大排序越靠前
+		enabled: true, // 是否启用
+		issue_id: 50,
+	},
+
 ];
 
 // 获取启用的友链并进行排序
