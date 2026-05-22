@@ -53,7 +53,6 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			"assets/images/DesktopWallpaper/bk4 (3).webp",
 			"assets/images/DesktopWallpaper/bz (2).png",
 			"assets/images/DesktopWallpaper/bz (1).png",
-
 		],
 		// 移动背景图片（支持单张或多张随机）
 		// mobile: "assets/images/MobileWallpaper/m1.avif",
@@ -82,12 +81,12 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			titleSize: "3.8rem",
 			// 主页横幅副标题
 			subtitle: [
-			"心有山海，静而无边",
-			"追风赶月，莫留遗憾",
-			"道阻且长，行则将至",
-			"浅喜似苍狗，深爱如长风",
-			"鲜衣怒马，不负韶华",
-			"万般过往，皆为序章",
+				"心有山海，静而无边",
+				"追风赶月，莫留遗憾",
+				"道阻且长，行则将至",
+				"浅喜似苍狗，深爱如长风",
+				"鲜衣怒马，不负韶华",
+				"万般过往，皆为序章",
 			],
 			// 主页横幅副标题字体大小
 			subtitleSize: "1.5rem",

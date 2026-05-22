@@ -118,8 +118,7 @@ export const friendsConfig: FriendLink[] = [
 	},
 	{
 		title: "Mizuki Docs",
-		imgurl:
-			"https://i.stardots.io/784774835/StarDots-2026052116374135506.jpg",
+		imgurl: "https://i.stardots.io/784774835/StarDots-2026052116374135506.jpg",
 		desc: "Mizuki User Manual",
 		siteurl: "https://docs.mizuki.mysqil.com",
 		tags: ["Docs"],
@@ -219,7 +218,7 @@ export const friendsConfig: FriendLink[] = [
 		enabled: true,
 		issue_id: 50,
 	},
-		{
+	{
 		title: "YFBLOG - 幻新至简",
 		imgurl: "https://cdn.yfblog.asia/image/favicon.ico",
 		desc: "随手笔记，技术心得分享.",
@@ -229,10 +228,9 @@ export const friendsConfig: FriendLink[] = [
 		enabled: true, // 是否启用
 		issue_id: 50,
 	},
-		{
+	{
 		title: "十三",
-		imgurl:
-			"https://img.nw177.cn/blog/100.assets/avatar.webp",
+		imgurl: "https://img.nw177.cn/blog/100.assets/avatar.webp",
 		desc: "欲买桂花同载酒，终不似，少年游。",
 		siteurl: "https://firefly.nw177.cn",
 		tags: ["Blog"],
@@ -242,8 +240,7 @@ export const friendsConfig: FriendLink[] = [
 	},
 	{
 		title: "ZhiJing’s Blog",
-		imgurl:
-			"https://iwexe.top/avatar.svg",
+		imgurl: "https://iwexe.top/avatar.svg",
 		desc: "Go with the flow.",
 		siteurl: "https://iwexe.top",
 		tags: ["Blog"],
@@ -261,7 +258,6 @@ export const friendsConfig: FriendLink[] = [
 		enabled: true, // 是否启用
 		issue_id: 50,
 	},
-
 ];
 
 // 获取启用的友链并进行排序
