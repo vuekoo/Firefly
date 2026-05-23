@@ -258,6 +258,16 @@ export const friendsConfig: FriendLink[] = [
 		enabled: true, // 是否启用
 		issue_id: 50,
 	},
+	{
+		title: "Sigrika-善良耙耙柑🍊",
+		imgurl: "https://avatars.githubusercontent.com/u/172878250",
+		desc: "记录我的二次元之旅",
+		siteurl: "https://qwq.sigrika.cc/",
+		tags: ["Blog"],
+		weight: 10, // 权重，数字越大排序越靠前
+		enabled: true, // 是否启用
+		issue_id: 50,
+	},
 ];
 
 // 获取启用的友链并进行排序

@@ -80,6 +80,12 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 				icon: "fa7-brands:github",
 			},
 			{
+				name: "fqzlrの主页",
+				url: "https://home.fqzlr.com",
+				external: true,
+				icon: "fa7-solid:house-chimney",
+		    },
+			{
 				name: "fqzlrの图床",
 				url: "https://tu.fqzlr.com",
 				external: true,

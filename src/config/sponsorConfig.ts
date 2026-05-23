@@ -61,8 +61,8 @@ export const sponsorConfig: SponsorConfig = {
 	sponsors: [
 		// 示例：已实名赞助者
 		{
-			name: "fqzlr",
-			amount: "¥0",
+			name: "214556787",
+			amount: "¥1",
 			date: "2025-10-01",
 		},
 	],
