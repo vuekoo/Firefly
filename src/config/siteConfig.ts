@@ -7,28 +7,28 @@ const SITE_LANG = "zh_CN";
 
 export const siteConfig: SiteConfig = {
 	// 站点标题
-	title: "Fqzlr",
+	title: "vuekoo",
 
 	// 站点副标题
-	subtitle: "fqzlrの博客",
+	subtitle: "vuekoo博客",
 
 	// 站点 URL
-	site_url: "https://fqzlr.com/",
+	site_url: "https://vuekoo.com/",
 
 	// 站点描述
 	description:
-		"fqzlr的个人技术博客，专注NAS分享、AI实践、学习笔记与技术总结，与个人成长分享。",
+		"第一个博客",
 
 	// 站点关键词
 	keywords: [
-		"fqzlr",
+		"vuekoo",
 		"nas",
 		"Fuwari",
 		"Astro",
 		"ACGN",
 		"博客",
 		"技术博客",
-		"静态博客",
+		"good",
 	],
 
 	// 主题色
