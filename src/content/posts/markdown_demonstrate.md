@@ -1,6 +1,6 @@
 ---
 title: "markdown在Vscode上使用说明书"
-published: "2026-05-26
+published: "2026-05-26"
 tages: [准备工作,基本语法]
 category: operate
 draft: true
