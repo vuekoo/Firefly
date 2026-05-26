@@ -6,7 +6,7 @@ description: 搭建属于自己的图床
 image: ./cover.jpg
 tags: [图床]
 category: 博客
-draft: false
+draft: true
 author: fqzlr
 ---
 # Cloudflare Workers 部署 Cloudflare‑ImgBed 图床完整教程

@@ -9,6 +9,7 @@ passwordHint: "123456"
 alias: "encrypted-example"
 tags: ["Test", "Encryption"]
 category: "Technology"
+dragt: true
 ---
 
 This blog template is built with [Astro](https://astro.build/). For the things that are not mentioned in this guide, you may find the answers in the [Astro Docs](https://docs.astro.build/).
@@ -23,7 +24,7 @@ description: This is the first post of my new Astro blog.
 image: ./cover.jpg
 tags: [Foo, Bar]
 category: Front-end
-draft: false
+draft: true
 ---
 ```
 

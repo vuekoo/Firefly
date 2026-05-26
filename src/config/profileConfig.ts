@@ -9,10 +9,10 @@ export const profileConfig: ProfileConfig = {
 	avatar: "https://q1.qlogo.cn/g?b=qq&nk=379446167&s=640",
 
 	// 名字
-	name: "Fqzlr",
+	name: "vuekoo",
 
 	// 个人签名
-	bio: "坐而言不如起而行.",
+	bio: "授人与鱼，不如受人于渔.只要掌握学习方法，面对什么问题都能对付了",
 
 	// 链接配置
 	// 已经预装的图标集：fa7-brands，fa7-regular，fa7-solid，material-symbols，simple-icons

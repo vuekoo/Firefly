@@ -8,7 +8,7 @@ tags:
   - Obsidian
   - astro
 category: 分类
-draft: false
+draft: true
 author: fqzlr
 ---
 Obsidian + Astro Composer + Git 插件 同步 Astro 博客到 GitHub 完整教程

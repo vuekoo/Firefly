@@ -6,7 +6,7 @@ description: git 使用教程及常用命令，自用
 image: ./cover.jpg
 tags: [Git]
 category: Git
-draft: false
+draft: true
 author: fqzlr
 ---
 # Git 详细使用教程（命令行版，附命令作用解释）
