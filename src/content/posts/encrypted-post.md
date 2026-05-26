@@ -7,7 +7,7 @@ pinned: false
 password: "123456"
 passwordHint: "123456"
 alias: "encrypted-example"
-tags: ["Test", "Encryption"]
+tags: ["Test", "Encryption", "准备工作", "基本语法"]
 category: "Technology"
 dragt: true
 ---
