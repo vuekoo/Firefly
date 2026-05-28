@@ -6,13 +6,13 @@ export const profileConfig: ProfileConfig = {
 	// 1. public 目录（以 "/" 开头，不优化）："/assets/images/avatar.webp"
 	// 2. src 目录（不以 "/" 开头，自动优化但会增加构建时间，推荐）："assets/images/avatar.webp"
 	// 3. 远程 URL："https://example.com/avatar.jpg"
-	avatar: "https://q1.qlogo.cn/g?b=qq&nk=379446167&s=640",
+	avatar: "Firefly/src/assets/images/DesktopWallpaper/Vuekoo.webp",
 
 	// 名字
 	name: "vuekoo",
 
 	// 个人签名
-	bio: "授人与鱼，不如受人于渔.只要掌握学习方法，面对什么问题都能对付了",
+	bio: "授人与鱼，不如受人于渔.",
 
 	// 链接配置
 	// 已经预装的图标集：fa7-brands，fa7-regular，fa7-solid，material-symbols，simple-icons

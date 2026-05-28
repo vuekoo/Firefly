@@ -43,7 +43,7 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 		desktop: [
 			"assets/images/DesktopWallpaper/bk (1).jpg",
 			"assets/images/DesktopWallpaper/bk (1).png",
-			"assets/images/DesktopWallpaper/bk (2).jpg",
+			"assets/images/DesktopWallpaper/OIP.webp",
 			"assets/images/DesktopWallpaper/bk (3).jpg",
 			"assets/images/DesktopWallpaper/bk (4).jpg",
 			"assets/images/DesktopWallpaper/bk (5).jpg",
@@ -76,7 +76,7 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			// 是否允许用户通过控制面板切换横幅标题显示
 			switchable: true,
 			// 主页横幅主标题
-			title: "fqzlrのblog",
+			title: "VueKooのblog",
 			// 主页横幅主标题字体大小
 			titleSize: "3.8rem",
 			// 主页横幅副标题
