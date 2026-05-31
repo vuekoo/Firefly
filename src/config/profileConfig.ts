@@ -21,41 +21,13 @@ export const profileConfig: ProfileConfig = {
 	// `pnpm add @iconify-json/<icon-set-name>`
 	// showName: true 时显示图标和名称，false 时只显示图标
 	links: [
-		{
-			name: "my home",
-			url: "https://home.fqzlr.com",
-			icon: "fa7-solid:house-chimney",
-			showName: false,
-		},
+		
 		{
 			name: "qq群",
 			icon: "fa7-brands:qq",
 			url: "https://qm.qq.com/q/wrmF4FI9pu",
 			showName: false,
 		},
-		{
-			name: "bilibili",
-			icon: "fa7-brands:bilibili",
-			url: "https://space.bilibili.com/2017273493",
-			showName: false,
-		},
-		{
-			name: "GitHub",
-			icon: "fa7-brands:github",
-			url: "https://github.com/fqzlr",
-			showName: false,
-		},
-		{
-			name: "Email",
-			icon: "fa7-solid:envelope",
-			url: "fqzlr@outlook.com",
-			showName: false,
-		},
-		{
-			name: "RSS",
-			icon: "fa7-solid:rss",
-			url: "/rss/",
-			showName: false,
-		},
+
 	],
 };
