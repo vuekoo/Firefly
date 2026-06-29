@@ -23,9 +23,21 @@ export const profileConfig: ProfileConfig = {
 	links: [
 		
 		{
-			name: "qq群",
-			icon: "fa7-brands:qq",
-			url: "https://qm.qq.com/q/wrmF4FI9pu",
+			name: "GitHub",
+			icon: "fa7-brands:github",
+			url: "https://github.com/vuekoo",
+			showName: false,
+		},
+		{
+			name: "Email",
+			icon: "fa7-solid:envelope",
+			url: "mailto:2710155768@qq.com",
+			showName: false,
+		},
+		{
+			name: "RSS",
+			icon: "fa7-solid:rss",
+			url: "/rss/",
 			showName: false,
 		},
 

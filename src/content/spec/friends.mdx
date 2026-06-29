@@ -8,18 +8,17 @@ description: "与优秀的朋友们一起成长"
 {/* ========== 站点信息 ========= */}
 
 export const site = {
-  name: "番茄主理人",
-  desc: "坐而言不如起而行.",
-  url: "https://fqzlr.com/",
-  avatar: "https://q1.qlogo.cn/g?b=qq&nk=20447289&s=640",
-  email: "fqzlr@outlook.com",
+  name: "vuekoo博客",
+  desc: "授人于鱼，不如授人于渔。.",
+  url: "https://vuekoo.com",
+  avatar: "https://vuekoo.com/favicon/favicon.ico",
+  email: "2710155768@qq.com",
 };
 
 {/* ========= 注意事项 ========== */}
 
 export const notes = [
   { title: "互换原则", content: "请先将本站添加到您的友链页面，确认后会添加您的友链" },
-  { title: "自助审核", content: "提交后会自动检查友链页是否可访问、是否包含本站回链；未通过会在 Issue 中说明原因。" },
   { title: "链接维护", content: "友链网站长期无法访问或内容违规，将会被移除" },
   { title: "内容要求", content: "内容积极向上，不含有任何含色情/反动/暴力等违法违规内容" },
   { title: "站点要求", content: "支持 HTTPS，以原创内容为主，能够正常访问且有持续更新" },
@@ -98,39 +97,25 @@ export const notes = [
               <p class="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">请先在您的网站友链页面添加本站信息，可直接复制左侧各字段</p>
             </div>
           </div>
-          {/* Step 2 */}
+          
+          {/* Step 3 */}
           <div class="flex gap-3.5">
             <div class="flex flex-col items-center">
               <div class="w-7 h-7 rounded-full bg-(--primary) text-white text-xs font-bold flex items-center justify-center shrink-0">2</div>
               <div class="w-0.5 flex-1 bg-(--line-divider) my-1.5"></div>
             </div>
             <div class="pb-4">
-              <a href="https://github.com/fqzlr/Firefly/issues/new?template=friend-request.yml" 
-                target="_blank"
-                class="font-semibold text-sm mb-1 inline-block text-(--primary) hover:underline">
-                自助申请友链
-              </a>
-              <p class="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed mt-1">点击上方或者页面右上角按钮进入申请表，按提示填写站点信息并提交。</p>
-            </div>
-          </div>
-          {/* Step 3 */}
-          <div class="flex gap-3.5">
-            <div class="flex flex-col items-center">
-              <div class="w-7 h-7 rounded-full bg-(--primary) text-white text-xs font-bold flex items-center justify-center shrink-0">3</div>
-              <div class="w-0.5 flex-1 bg-(--line-divider) my-1.5"></div>
-            </div>
-            <div class="pb-4">
-              <p class="font-semibold text-sm mb-1">评论区留言或邮箱申请: fqzlr@outlook.com</p>
+              <p class="font-semibold text-sm mb-1">评论区留言或邮箱申请: 2710155768@qq.com</p>
               <p class="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">申请模板，把内容复制修改后到评论区发送</p>
               <div class="relative rounded-lg bg-black/5 dark:bg-white/5 p-4 pr-10 text-[0.7rem] leading-relaxed overflow-x-auto whitespace-pre">
                 <button onclick="navigator.clipboard.writeText('站点名称：fqlzr\n站点描述：坐而言不如起而行.\n站点链接：https://fqzlr.com/\n头像链接：https://q1.qlogo.cn/g?b=qq&nk=20447289&s=640');this.querySelectorAll('svg')[0].classList.add('hidden');this.querySelectorAll('svg')[1].classList.remove('hidden');setTimeout(()=>{this.querySelectorAll('svg')[0].classList.remove('hidden');this.querySelectorAll('svg')[1].classList.add('hidden')},1500)" class="absolute top-2 right-2 w-7 h-7 flex items-center justify-center rounded-md bg-black/10 dark:bg-white/10 text-(--btn-content) hover:opacity-80 transition-opacity cursor-pointer">
                   <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012-2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
                   <svg class="w-3.5 h-3.5 hidden text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                 </button>
-{`站点名称：fqzlr
-站点描述：坐而言不如起而行.
-站点链接：https://fqzlr.com/
-头像链接：https://fqzlr.com/avatar.jpg`}
+{`站点名称：Vuekoo
+站点描述：授人于鱼，不如授人于渔。.
+站点链接：https://vuekoo.com/
+头像链接：https://vuekoo.com/favicon/favicon.ico`}
               </div>
             </div>
           </div>
@@ -138,7 +123,7 @@ export const notes = [
           {/* Step 4 */}
           <div class="flex gap-3.5">
             <div class="flex flex-col items-center">
-              <div class="w-7 h-7 rounded-full bg-(--primary) text-white text-xs font-bold flex items-center justify-center shrink-0">4</div>
+              <div class="w-7 h-7 rounded-full bg-(--primary) text-white text-xs font-bold flex items-center justify-center shrink-0">3</div>
             </div>
             <div>
               <p class="font-semibold text-sm mb-1">等待审核</p>

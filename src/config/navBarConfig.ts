@@ -43,12 +43,12 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 	});
 
 	// 企鹅群链接
-	links.push({
-		name: "企鹅群",
-		url: "https://qm.qq.com/q/wrmF4FI9pu",
-		external: true,
-		icon: "simple-icons:qq",
-	});
+	// links.push({
+	// 	name: "企鹅群",
+	// 	url: "https://qm.qq.com/q/wrmF4FI9pu",
+	// 	external: true,
+	// 	icon: "simple-icons:qq",
+	// });
 
 	// 关于及其子菜单
 	links.push({
@@ -75,46 +75,9 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 		children: [
 			{
 				name: "GitHub",
-				url: "https://github.com/fqzlr",
+				url: "https://github.com/vuekoo",
 				external: true,
 				icon: "fa7-brands:github",
-			},
-			{
-				name: "Vuekooの主页",
-				url: "https://home.fqzlr.com",
-				external: true,
-				icon: "fa7-solid:house-chimney",
-		    },
-			{
-				name: "Vuekooの图床",
-				url: "https://tu.fqzlr.com",
-				external: true,
-				icon: "fa7-solid:image",
-			},
-			{
-				name: "Vuekooの邮局",
-				url: "https://yj.fqzlr.edu.kg",
-				external: true,
-				icon: "fa7-solid:envelope",
-			},
-
-			{
-				name: "Vuekooの笔记",
-				url: "https://bj.fqzlr.com",
-				external: true,
-				icon: "material-symbols:book-4-rounded",
-			},
-			{
-				name: "Vuekooの统计",
-				url: "https://umami.fqzlr.com/share/kHCJG2ZUL1r6q5Js",
-				external: true,
-				icon: "material-symbols:123",
-			},
-			{
-				name: "Vuekooの状态",
-				url: "https://kuma.fqzlr.com/status/1",
-				external: true,
-				icon: "fa7-solid:chart-line",
 			},
 		],
 	});
