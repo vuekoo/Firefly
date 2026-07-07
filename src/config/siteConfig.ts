@@ -17,7 +17,7 @@ export const siteConfig: SiteConfig = {
 
 	// 站点描述
 	description:
-		"授人于鱼，不如授人于渔。",
+		"我在展望世界，世界也在展望我。",
 
 	// 站点关键词
 	keywords: [
