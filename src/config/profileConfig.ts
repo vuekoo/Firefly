@@ -12,7 +12,7 @@ export const profileConfig: ProfileConfig = {
 	name: "vuekoo",
 
 	// 个人签名
-	bio: "授人与鱼，不如受人于渔.",
+	bio: "我在展望世界，世界也在展望我.",
 
 	// 链接配置
 	// 已经预装的图标集：fa7-brands，fa7-regular，fa7-solid，material-symbols，simple-icons
